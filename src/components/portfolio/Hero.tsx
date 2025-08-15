@@ -32,11 +32,17 @@ const Hero = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Profile Image */}
           <div className="flex-shrink-0 animate-fade-in">
-            <img
+            {/* <img
               src="/profile.jpg" // place your image in public folder
               alt="Razzahi Naleer"
               className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-2xl border-4 border-primary/30 hover:scale-105 transition-transform duration-500"
+            /> */}
+            <img
+            src="/profile.jpg"
+            alt="Razzahi Naleer"
+            className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover shadow-xl border-4 border-primary/30"
             />
+
           </div>
 
           {/* Hero Text */}
