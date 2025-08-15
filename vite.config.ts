@@ -4,11 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "./",
-  server: {
-    host: "::",
-    port: 8080,
-  },
+  base: "./", // Important for SPA static deployment
   plugins: [
     react(),
     mode === "development" && componentTagger(),
@@ -19,6 +15,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist",
+    outDir: "dist", // Vercel will use this folder
+    sourcemap: false,
   },
 }));
