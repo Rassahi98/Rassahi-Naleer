@@ -4,22 +4,21 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./", // relative path for static hosting (Vercel, GitHub Pages)
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        // optional SCSS settings
-        silenceDeprecations: ['mixed-decls'],
+    plugins: [react()],
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
       },
     },
-  },
-  build: {
-    outDir: "dist", // default build folder
-  },
-});
+    css: {
+      preprocessorOptions: {
+        scss: {
+          silenceDeprecations: ["mixed-decls"],
+        },
+      },
+    },
+    build: {
+      outDir: "dist",
+    },
+  });
+  
